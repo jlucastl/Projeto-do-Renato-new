@@ -1,0 +1,403 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Inter", sans-serif;
+}
+
+header{
+    display: flex;
+    justify-content: center ;
+    align-items: center;
+    background-color: green;
+    color: aliceblue;
+}
+nav {
+    padding: 10px;
+    display: flex;
+    align-items: center;
+}
+
+#hImg{
+    height: 5rem;
+}
+#hInfo{
+    display: flex;
+    align-items: center;
+}
+#mSala{
+    font-weight: 500;
+    background-color: rgb(231, 231, 231);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: .5rem;
+    position: absolute;
+    z-index: 2;
+    left: 4.6rem;
+
+    border-radius: 1.5rem;
+    border: none;
+
+    width: 9rem;
+    padding: .7rem;
+    cursor: pointer;
+    font-size: 1.5rem;
+}
+#mSala span {
+    font-size: 2.5rem;
+}
+#mSala:hover {
+    background-color: rgb(211, 211, 211);
+}
+
+
+
+#cSala{
+    display: none;
+    position: fixed;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    z-index: 1000;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: black;
+    background-color: white;
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: 0px 0px 10px gray;
+}
+.bModais {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+.bModais button {
+    padding: .5rem;
+    width: 7rem;
+    border: none;
+    background-color: limegreen;
+    font-size: 1.3rem;
+    border-radius: .5rem;
+    cursor: pointer;
+}
+.bModais button:hover {
+    background-color: rgb(45, 177, 45);
+}
+#cancelar {
+    background-color: red;
+}
+#cancelar:hover {
+    background-color: rgb(199, 20, 20);
+}
+#nomeSala {
+    padding: .7rem;
+    border: 2px solid;
+    border-radius: 1rem;
+    width: 15rem;
+}
+
+#cAluno{
+    display: none;
+}
+
+article{
+    top: 0;
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    width: 18.5rem;
+    height: 100vh;
+
+    align-items: center;
+    gap: 3rem;
+    padding-top: 10rem ;
+
+
+    background-color: rgb(255, 255, 255);
+    color: aliceblue;
+
+    box-shadow: 2px 6rem 10px gray;
+}
+article h2 {
+    color: black;
+    font-size: 1.8rem;
+}
+article h2::after {
+    content: '';
+    position: absolute;
+    width: 60%;
+    left: 3.8rem;
+    height: 4px;
+    display: block;
+    background-color: black;
+}
+
+#nSala{
+    transition:0.2s ease;
+    width: 80%;
+    height: 3.5rem;
+    border-radius:.5rem ;
+    border: none;
+    cursor: pointer;
+    background-color: limegreen;
+    font-size: 1.4rem;
+}
+#nSala:hover{
+    background-color: rgb(44, 173, 44);
+
+box-shadow: 0px 0px 5px white;
+
+}
+
+.rSala{
+    position: absolute;
+    left: 14.8rem;
+    margin-bottom: 2.6rem;
+    transition:0.3s ease;
+    padding: .2rem;
+    border: none;
+    border-radius: 2rem;
+    cursor: pointer;
+    background-color: rgba(31, 31, 31, 0.836);
+}
+.rSala:hover{
+    background-color: rgb(141, 20, 20);
+
+}
+
+#lSalas li{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition:0.3s ease;
+    background-color: rgb(214, 214, 214);
+    color: black;
+    padding: 1rem;
+    border-radius: .5rem;
+    list-style: none;
+    margin-bottom: 1rem;
+    max-width: 15rem;
+    width: 11.5rem;
+    overflow: hidden;
+    text-align: center;
+    font-size: 1.3rem;
+}
+
+#lSalas li:hover{
+    background-color: rgb(163, 163, 163);
+}
+
+#dAlunos{
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+
+}
+
+#alunosBox img{
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+  border-radius: .5rem;
+}
+#alunosBox{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.dSala{
+    font-size: xx-large;
+    margin-bottom: 1rem;
+} 
+
+/* Containers de listas de alunos */
+#lInterior,
+#lCidade {
+  list-style: none;
+  padding-left: 0;
+  margin: 1rem 0;
+
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;              
+  justify-content: center;
+}
+
+#lInterior li,
+#lCidade li {
+  background-color: #f5f5f5;
+  color: #222;
+  border-radius: .5rem;
+  text-align: center;
+  flex: 0 1 50px;
+  box-shadow: 0px 0px 5px rgba(0,0,0,0.2);
+  padding: .5rem;
+}
+
+#lInterior li{
+      background-color:lightgoldenrodyellow;
+}
+#lCidade li{
+    background-color: lightgreen;
+}
+
+#pAluno{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    padding: .6rem;
+}
+#pAluno button {
+    position: absolute;
+    border: none;
+    background-color: black;
+    padding: .2rem;
+    border-radius: .8rem;
+    margin-left: 9rem;
+}
+
+
+
+/* Container principal do cadastro de alunos */
+#dAluno {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-self: center;
+  gap: 1rem;
+  margin: 2rem;
+}
+
+/* Botão de abrir formulário */
+#nAluno {
+  padding: .9rem;
+  width: 13rem;
+  text-align: center;
+  border-radius: 0.5rem;
+  border: none;
+  cursor: pointer;
+  background-color: limegreen;
+  font-size: 1.2rem;
+  transition: 0.2s ease;
+}
+#nAluno:hover {
+  background-color: rgb(44, 173, 44);
+  box-shadow: 0 0 5px white;
+}
+
+/* Formulário de cadastro */
+#cAluno {
+  display: none; /* só aparece quando desejar */
+  background-color: #f5f5f5;
+  flex-direction: column;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  box-shadow: 0px 0px 10px rgba(0,0,0,0.3);
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+  gap: 2rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  justify-content: center;
+  align-items: center;
+}
+
+/* Inputs e select */
+#cAluno input[type="text"]{
+    width: 17rem;
+    padding: 0.5rem;
+    margin: 0.5rem 0;
+    border-radius: 0.5rem;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+}
+#fotoAluno{
+    display: none;
+}
+
+#colocarImagem {
+    background-color: transparent;
+    padding: 1rem 2rem;
+    border: dashed 3.5px black;
+    cursor: pointer;
+}
+#colocarImagem span {
+    font-size: 2.5rem;
+}
+
+#cAluno select {
+    width: 18rem;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+}
+
+/* Checkbox */
+#cAluno label {
+  display: flex;
+  align-items: center;
+  justify-self: center;
+  gap: 0.5rem;
+  font-size: 1rem;
+  background-color: #ccc;
+  padding: .7rem;
+  border-radius: 1rem;
+}
+
+.botoesCadastrarAlunos {
+    display: flex;
+    justify-content: space-around;
+}
+#cCadastrarAluno {
+  padding: .8rem;
+  margin-top: 1rem;
+  border-radius: 0.5rem;
+  border: none;
+  cursor: pointer;
+  background-color: red;
+  transition: 0.2s ease;
+  font-size: 1.05rem;
+}
+#cCadastrarAluno:hover {
+  background-color: rgb(199, 20, 20);
+  box-shadow: 0 0 5px white;
+}
+
+
+/* Botão do formulário */
+#cAluno button[type="submit"] {
+  padding: .8rem;
+  margin-top: 1rem;
+  border-radius: 0.5rem;
+  border: none;
+  cursor: pointer;
+  background-color: limegreen;
+  transition: 0.2s ease;
+  font-size: 1.05rem;
+}
+#cAluno button[type="submit"]:hover {
+  background-color: rgb(44, 173, 44);
+  box-shadow: 0 0 5px white;
+}
+
+@media (max-width: 670px) {
+    header h1 {
+        display: none;
+    }
+    .dSala{
+        font-size: medium;
+    }
+}

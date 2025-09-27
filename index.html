@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projeto Renato</title>
+    <link rel="stylesheet" href="style/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+</head>
+<body id="body">
+<!-- O header soviado -->
+
+    <header id="CABECALHO">
+        <nav id="NAV_BAR">
+            <div id="MENU_ICONE">
+                <span onclick="abrirMenu()" id="menuIcon" class="material-symbols-outlined">menu</span>
+            </div>
+            <div class="LOGO">
+                <img src="img/ifce_logo.png" alt="Logo do ifce">
+            </div>
+            <div class="LOGIN">
+                <a href="login.html"><button id="logout" >Log-Out</button></a>
+            </div>
+        </nav>
+    </header>o
+    <main id="CORPO">
+
+<!-- Esse é o menu lateral -->
+
+        <menu id="MENU">
+            <div id="header_menu">
+                <span onclick="abrirMenu()" id="menuIcon" class="material-symbols-outlined">close</span>
+                <div class="motion" id="motion">
+                    <h1>Salas</h1>
+            </div>
+            </div>
+            <div class="itens">
+                <ul id="SALAS">
+                <button onclick="abrirModal()">Adicionar uma sala</button>
+                    <p id="msgMenu">Sem salas</p>
+                </ul>
+            </div>
+            </menu>
+
+<!-- "Apresentação" é a primeira parte do main, abaixo do header -->
+
+        <div id="APRESENTACAO" class="APRESENTACAO">
+            <h1 class="APRESENTACAO_h1">Alunos</h1>
+            <button class="btn" onclick="abrirModalAluno()">Adicionar um aluno</button>
+            <p id="msg">Sem alunos</p>
+            <h1 id="ALUNOS_INTERIOR">Alunos do Interior</h1>
+            <div id="alunosInteriorContainer">
+            </div>
+            <h1 id="ALUNOS_CIDADE">Alunos da Cidade</h1>
+            <div id="alunosContainer">
+            </div>
+        </div>
+
+<!-- Essa section é sobre o modal das salas (O pedido do nome das salas, etc...) -->
+
+        <section class="MODAL" id="MODAL">
+            <h1>Criar Sala</h1>
+
+            <input type="text" id="nomeSala" placeholder="Nome da Sala">
+            <div id="AVISO_SALA">
+                <span class="material-symbols-outlined">error</span>
+                <h1>O campo de nome é obrigatório</h1>
+                </div>
+            <div class="MODAL_BOTOES">
+            
+            <button class="btn" onclick="criarSala()">Criar</button>
+           
+            <button id="btn-cancelar" onclick="fecharModal()">Cancelar</button>
+            </div>
+        </section>
+
+<!-- Essa section é sobre o modal dos alunos como da pra ver-->
+
+        <section class="MODAL_ALUNO" id="MODAL_ALUNO">
+            <h1>Criar Aluno</h1>
+            
+            <input type="text" id="nomeAluno" placeholder="Nome do Aluno">
+            <div id="AVISO_ALUNO">
+            <span class="material-symbols-outlined">error</span>
+            <h1>O campo de nome é obrigatório</h1>
+            </div>
+
+            <input id="SEeINTERIOR" type="checkbox" placeholder="">
+            <label for="SEeINTERIOR" onclick="checkToggle()" class="Sim">
+            <h4>O Aluno é do interior?</h4>
+            <span id="TOGGLE" class="material-symbols-outlined">
+                toggle_off
+                </span>
+            </label>
+            <div class="MODAL_BOTOES">
+
+            <button class="btn" onclick="criarAluno()">Criar</button>
+
+            <button id="btn-cancelar" onclick="fecharModalAluno()">Cancelar</button>
+            </div>
+        </section>
+        <section id="MODAL_IMAGEM" class="MODAL_IMAGEM">
+            <h1>Envie uma foto do aluno</h1>
+
+            <button id="BOTAO_IMAGEM"><span id="imagemIcon">Escolha uma Imagem</span></button>
+            <input type="file" id="fileInput" accept="imagem/*">
+
+            <div id="AVISO_IMAGEM">
+                <span class="material-symbols-outlined">error</span>
+                <h1>Adicione uma imagem para prosseguir</h1>
+                </div>
+            <div class="MODAL_BOTOES">
+            
+            <button id="enviarBtn" class="btn" onclick="enviarImagem()">Enviar</button>
+           
+            </div>
+        </section>
+<!-- Essa section é sobre o modal de confirmação da remoção de uma sala ou aluno como da pra ver soviado-->
+        <section class="MODAL_REMOVER" id="MODAL_REMOVER">
+            <h1 id="REMOVER_h1">Tem certeza que deseja remover essa sala?</h1>
+        <div class="SIMouNAO">
+            <button class="btn_confirmar" id="btn_confirmar">Sim</button>
+            <button class="btn_cancelar" id="btn_cancelar">Não</button>
+        </div>
+            </div>
+        </section>
+
+<!-- Essa section é para quando não há salas, o usuário criar uma -->
+
+        <section id="SALAS_VAZIAS" class="SALAS_VAZIAS">
+            <section class="SALAS_VAZIAS">
+                <h1>Não há salas</h1>
+                <button onclick="abrirModal()"><h4>Criar uma sala</h4></button>
+            </section>
+        </section>
+
+
+    </main>
+
+
+
+
+
+
+    <footer id="RODAPE">
+        <h3>Site feito por: </h3>
+        <p>João Lucas</p>
+        <p>Luiz Henrique</p>
+    </footer>
+
+    <script type="module" src="script/firebase.js"></script>
+    <script type="module" src="script/app.js"></script>
+    <script src="script/index.js"></script>
+    
+</body>
+</html>

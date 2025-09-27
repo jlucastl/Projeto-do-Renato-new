@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title> 
+    <link rel="stylesheet" href="style/new.css" >
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+</head>
+<body>
+
+<header>
+    <nav>
+    <button id="mSala"> <span class="material-symbols-outlined">menu</span>Salas</button>
+
+    <div id="hInfo">
+    <img id="hImg" alt="Logo-IFCE" src="img/ifce_logo.png">
+    <h1>Cadastro de salas e alunos</h1>
+    </div>
+  </nav>
+</header>
+
+  <!--Criar Salas-->
+  <article id="listaS">
+    <button id="nSala">Cadastrar Sala</button>
+    <div id="cSala">
+      <h1>Cadastro de Salas</h1>
+      <form id="formSala">
+        <input type="text" id="nomeSala" placeholder="Nome da sala" required>
+        <div class="bModais">
+        <button type="submit">Criar Sala</button>
+        <button id="cancelar">Cancelar</button>
+      </div>
+      </form>
+    </div>
+
+    <h2>Salas</h2>
+    <ul id="lSalas"></ul>
+  </article>
+
+
+  <!--Cadastrar Alunos-->
+
+    <div id="dAluno">
+    <button id="nAluno">Cadastrar Aluno</button>
+  <div id="cAluno">
+    <h2>Cadastrar Aluno</h2>
+    <form id="formAluno">
+      <select id="selectSala" required>
+        <option value="">Selecione a sala</option>
+      </select><br><br>
+
+      <input type="text" id="nomeAluno" placeholder="Nome do aluno" required><br><br>
+
+      <label>
+        Do interior? 
+        <input type="checkbox" id="interiorAluno">
+      </label><br><br>
+
+      <button id="colocarImagem" title="Enviar imagem do aluno">
+        <span id="imagemLogo" class="material-symbols-outlined">image_arrow_up</span>
+      </button>
+
+      <input type="file" id="fotoAluno" accept="image/*" required><br><br>
+      <div class="botoesCadastrarAlunos">
+      <button class="bCadastrarAluno" type="submit">Cadastrar Aluno</button>
+      <button id="cCadastrarAluno">Cancelar</button>
+      </div>
+    </form>
+  </div>
+
+  </div>
+  
+  <div id="alunosBox">
+    <h2 class='dSala'>NENHUMA SALA SELECIONADA</h2>
+  </div>
+
+
+  <script type="module" src="script/firebase.js"></script>
+  <script type="module" src="script/app.js"></script>
+  <script src="script/main.js"></script>
+</body>
+</html>

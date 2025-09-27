@@ -1,0 +1,687 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: "Inter", sans-serif;
+}
+
+:root {
+    --cor-principal: rgba(0, 105, 0, 0.767);
+    --cor-fonte: rgb(37, 37, 37);
+}
+body {
+    background-color: #f5f5f5;
+}
+
+header {
+    background-color: var(--cor-principal);
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    padding: 1rem;
+}
+#MENU_ICONE {
+    display: flex;
+    align-items: center;
+    gap: 38%;
+}
+
+#MENU_ICONE span{
+    position: relative;
+    z-index: 1000;
+    font-size: 4rem;
+    color: rgb(235, 235, 235);
+    text-shadow: 1px 2px 8px rgb(22, 22, 22);
+    cursor: pointer;
+}
+#MENU_ICONE span:hover {
+    transition: transform .2s ease;
+    transform: scale(1.1);
+}
+
+#MENU {
+    display: flex;
+    justify-content: center;
+    background-color: rgb(255, 255, 255);
+    position: fixed;
+    padding: 0px 2.5rem;
+    height: 94%;
+    width: 15%;
+    left: 0;
+    top: 0;
+    box-shadow: 3px 0px 10px rgb(97, 97, 97);
+    z-index: 2;
+    transition: .2s ease;
+    overflow: scroll;
+    overflow-x: hidden;
+}
+#header_menu {
+    display: flex;
+    background-color: rgb(252, 252, 252);
+    position: sticky;
+    align-items: center;
+    top: 0;
+    padding-right: 15vw;
+    height: 11%;
+    z-index: 1001;
+    box-shadow: 0px 5px 10px gray;
+}
+
+#header_menu span {
+    font-size: 4.5rem;
+    margin-left: 1.7vw;
+}
+#header_menu span:hover {
+    transition: transform .2s ease;
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+.motion {
+    position: absolute;
+    pointer-events: none;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.motion h1 {
+    position: relative;
+    z-index: 1001;
+}
+
+.itens {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 12rem;
+    position: absolute;
+}
+.itens li:hover .REMOVER_SALA {
+    display: flex;
+}
+.itens button {
+    background-color: limegreen;
+    padding: 1.3rem;
+    font-size: 1.6rem;
+    border-radius: 1rem;
+    width: 20rem;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    box-shadow: 0px 0px 8px rgba(31, 31, 31, 0.726);
+}
+
+.itens ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+    list-style: none;
+    margin-top: 8rem;
+    padding: 2.5rem;
+}
+.itens li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(214, 214, 214);
+    box-shadow: 0px 0px 8px rgb(100, 100, 100);
+    width: 14rem;
+    padding: 1.5rem;
+    font-size: 2rem;
+    border-radius: 1rem;
+    cursor: pointer;
+}
+
+.itens button:hover {
+    background-color: rgb(45, 184, 45);
+    box-shadow: 0px 0px 10px rgb(78, 78, 78);
+}
+
+.itens li:hover {
+    background-color: rgb(190, 190, 190);
+}
+
+.itens li:hover {
+    display: flex;
+}
+
+.REMOVER_SALA{
+    display: none;
+    position: absolute;
+    margin-left: 16.5rem;
+    margin-bottom: 3.5rem;
+    text-align: center;
+}
+.REMOVER_SALA span {
+    font-size: 1.6rem;
+    background-color: brown;
+    border-radius: 5rem;
+    padding: .09rem;
+}
+.REMOVER_SALA span:hover {
+    transform: scale(1.27);
+}
+
+.LOGO {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+.LOGO img{
+    width: 5rem;
+}
+
+.LOGIN button:hover {
+    cursor: pointer;
+    background-color: rgb(45, 184, 45);
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.534);
+}
+
+.LOGIN button{
+    background-color: limegreen;
+    color: black;
+    font-size: 1.1rem;
+    padding: .5rem;
+    width: 6rem;
+    border: none;
+    box-shadow: 0px 0px 5px rgba(29, 29, 29, 0.548);
+    border-radius: .3rem;
+}
+
+/* MAIN --------------------------------- */
+
+
+#CORPO {
+    margin-top: 9rem;
+}
+.APRESENTACAO {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    color: var(--cor-fonte);
+    align-items: center;
+}
+
+.APRESENTACAO_h1 {
+    pointer-events: none;
+}
+.APRESENTACAO h1::after {
+    content: '';
+    width: 85%;
+    height: 4px;
+    background-color: black;
+    display: block;
+    justify-self: center;
+}
+
+.APRESENTACAO button{
+    text-decoration: none;
+    color: var(--cor-fonte);
+    background-color: limegreen;
+    box-shadow: 0px 0px 5px rgba(128, 128, 128, 0.849);
+    padding: 1rem;
+    border-radius: 1rem;
+    width: 15rem;
+    text-align: center;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 17px;
+    border: none;
+}
+.APRESENTACAO button:hover {
+    background-color: rgb(45, 184, 45);
+}
+
+.MODAL, .MODAL_ALUNO, .MODAL_IMAGEM {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    align-items: center;
+    z-index: 1001;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0px 0px 10px black;
+    background-color: rgb(255, 255, 255);
+    padding: 20px;
+    border-radius: 1rem;
+    gap: 1.2rem;
+}
+
+#ALUNOS_INTERIOR, #ALUNOS_CIDADE {
+    display: none;
+}
+
+.Sim {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    cursor: pointer;
+}
+
+.Sim h4:hover {
+    text-decoration: underline;
+}
+
+.Sim h4 {
+    font-size: 1.2rem;
+}
+
+#SEeINTERIOR {
+    display: none;
+    transition: .2s ease;
+}
+
+#SEeINTERIOR:checked + .Sim span {
+    transition: .2s ease;
+    color: green;
+}
+
+#TOGGLE {
+    font-size: 2.5rem;
+}
+
+#TOGGLE:checked {
+    color: green;
+}
+
+.MODAL h1, .MODAL_ALUNO h1 {
+    pointer-events: none;
+}
+
+#nomeSala, #nomeAluno {
+    padding: .8rem;
+    border: 2px solid black;
+    width: 15rem;
+    border-radius: 1.3rem;
+}
+
+.MODAL button, .MODAL_ALUNO button, .MODAL_IMAGEM button {
+    padding: .7rem;
+    width: 8rem;
+    background-color: limegreen;
+    border: none;
+    border-radius: .7rem;
+    cursor: pointer;
+    font-size: 17px;
+}
+
+.MODAL button:hover, .MODAL_ALUNO button:hover, .MODAL_IMAGEM button:hover {
+    background-color: rgb(45, 184, 45);
+}
+
+#btn-cancelar {
+    background-color: rgb(209, 45, 45);
+}
+#btn-cancelar:hover {
+    background-color: rgb(192, 39, 39);
+}
+
+#alunosContainer, #alunosInteriorContainer {
+    display: grid;
+    grid-template-columns: auto auto auto;
+}
+
+#ALUNOS_SALA {
+    display: none;
+}
+
+#BOTAO_IMAGEM {
+    background-color: transparent;
+    border: dotted .2rem black;
+    width: 12rem;
+    padding: 1.3rem;
+}
+
+#BOTAO_IMAGEM span {
+    font-size: 1.3rem;
+    text-align: center;
+}
+
+#BOTAO_IMAGEM:hover{
+    border: dotted green;
+}
+#BOTAO_IMAGEM:hover span {
+    color: green;
+}
+.MODAL_REMOVER {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    align-items: center;
+    z-index: 1001;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0px 0px 10px black;
+    background-color: rgb(255, 255, 255);
+    padding: 20px;
+    border-radius: 1rem;
+    gap: 1.8rem;
+}
+.MODAL_REMOVER h1 {
+    text-align: center;
+    max-width: 33rem;
+}
+.SIMouNAO {
+    display: flex;
+    gap: 4rem;
+}
+.btn_confirmar {
+    padding: .7rem;
+    width: 8rem;
+    background-color: limegreen;
+    border: none;
+    border-radius: .7rem;
+    cursor: pointer;
+    font-size: 17px;
+}
+.btn_confirmar:hover {
+    background-color: rgb(45, 184, 45);
+}
+
+.btn_cancelar{
+    padding: .7rem;
+    width: 8rem;
+    background-color: rgb(236, 24, 24);
+    border: none;
+    border-radius: .7rem;
+    cursor: pointer;
+    font-size: 17px;
+}
+.btn_cancelar:hover {
+    background-color: rgb(197, 21, 21);
+}
+.aluno{
+    margin: 1.5rem;
+    height: 30rem;
+    width: 23rem;
+    text-align: center;
+    display: flex;
+    align-items: end;
+    justify-content: center;
+    border-radius: 1.5rem;
+    box-shadow: 0px 0px 10px rgba(43, 43, 43, 0.534);
+}
+.aluno h3 {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    background-color: limegreen;
+    padding: 2rem;
+    border-bottom-right-radius: 1.5rem;
+    border-bottom-left-radius: 1.5rem;
+    box-shadow: 0px 0px 10px rgba(43, 43, 43, 0.534);
+    overflow: hidden;
+}
+
+#AVISO_ALUNO, #AVISO_SALA, #AVISO_IMAGEM {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    color: red;
+    top: 7rem;
+    font-size: .5rem;
+    pointer-events: none;
+}
+#AVISO_ALUNO span, #AVISO_SALA span, #AVISO_IMAGEM span{
+    font-size: 1.4rem;
+}
+
+#fileInput {
+    display: none;
+}
+
+.aluno.interior h3 {
+    background-color: yellow;
+}
+.OPCOES {
+    position: absolute;
+    margin-bottom: 21.8vw;
+    margin-left: 15vw;
+    cursor: pointer;
+}
+.OPCOES span {
+    font-size: 2.8rem;
+}
+
+.OPCOES span:hover {
+    transition: .1s ease;
+    color: green;
+    transform: scale(1.2);
+
+}
+#OPCOES_MENU {
+    display: none;
+    flex-direction: column;
+    background-color: white;
+    width: 13rem;
+    gap: .5rem;
+    padding: .5rem;
+    position: absolute;
+    top: 3rem;
+    border-radius: 1rem;
+    box-shadow: 3px 3px 5px gray;
+}
+
+#OPCOES_MENU h2 {
+    font-size: 1.3rem;
+    display: flex;
+    align-items: center;
+}
+#OPCOES_MENU h2:hover {
+    color: red;
+}
+
+#OPCOES_MENU span {
+    font-size: 3rem;
+}
+#OPCOES_MENU span:hover {
+    transform: scale(1.1);
+    color: red;
+}
+
+.SALAS_VAZIAS {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+}
+.SALAS_VAZIAS button{
+    text-decoration: none;
+    color: var(--cor-fonte);
+    background-color: limegreen;
+    box-shadow: 0px 0px 5px rgba(128, 128, 128, 0.849);
+    padding: 1rem;
+    border-radius: 1rem;
+    width: 15rem;
+    text-align: center;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 17px;
+    border: none;
+}
+.SALAS_VAZIAS button:hover {
+    background-color: rgb(45, 184, 45);
+}
+.SALAS_VAZIAS h1 {
+    pointer-events: none;
+}
+.SALAS_VAZIAS h1::after {
+    content: '';
+    width: 85%;
+    height: 4px;
+    background-color: black;
+    display: flex;
+    justify-self: center;
+}
+
+.SALAS_VAZIAS h4 {
+    color: var(--cor-fonte);
+}
+
+/* RODAPE -------------------------------- */
+
+#RODAPE {
+    background-color: var(--cor-principal);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: .5rem;
+    padding: 1rem 0px;
+    color: var(--cor-fonte);
+    width: 100%;
+    margin-top: 30.8vw;
+}
+#RODAPE p, h3{
+    font-size: 1.1rem;
+}
+
+
+@media (max-width: 800px) {
+
+
+
+    #MENU {
+        width: 50%;
+        z-index: 2;
+    }
+    #header_menu {
+        padding-right: 50vw;
+    }
+
+    .itens li {
+        width: 40vw;
+    }
+    .itens button {
+        width: 62vw;
+        font-size: 1.2rem;
+    }
+    .REMOVER_SALA {
+        display: flex;
+        margin-left: 12.5rem;
+    }
+    #MODAL {
+        z-index: 1001;
+    }
+
+    .APRESENTACAO {
+        gap: 3rem;
+    }
+    #alunosContainer, #alunosInteriorContainer {
+        grid-template-columns: auto auto;
+    }
+
+    .aluno {
+        margin: .3rem;
+        margin-bottom: 2rem;
+        width: 12rem;
+        height: 20rem;
+        border-radius: .8rem;
+    }
+    .aluno h3 {
+        display: flex;
+        justify-content: center;
+        padding: 1.2rem;
+        border-bottom-left-radius: .8rem;
+        border-bottom-right-radius: .8rem;
+        overflow: hidden;
+    }
+    .OPCOES {
+        margin-bottom: 66.5vw;
+        margin-left: 33vw;
+    }
+    .OPCOES span {
+        font-size: 3rem;
+    }
+    #OPCOES_MENU {
+        right: -.5rem;
+        width: 8rem;
+        padding: .3rem;
+        top: 2.5rem;
+    }
+    #OPCOES_MENU h2 {
+        font-size: 1.1rem;
+    }
+    #OPCOES_MENU span {
+        font-size: 2.6rem;
+    }
+
+    #RODAPE {
+        height: 13rem;
+        margin-top: 23.3vh;
+    }
+    #RODAPE h3 {
+        margin-top: 2rem;
+    }
+}
+@media (min-width: 801px) and (max-width: 1279px) {
+    #MENU {
+        width: 35%;
+    }
+    #header_menu {
+        height: 9%;
+        padding-right: 34vw;
+    }
+    .APRESENTACAO {
+        gap: 3.5rem;
+    }
+    .REMOVER_SALA {
+        display: flex;
+    }
+
+    .aluno {
+        width: 19rem;
+        height: 24rem;
+        margin: 1rem;
+        margin-bottom: 3rem;
+    }
+    .OPCOES {
+        margin-bottom: 32vw;
+        margin-left: 24vw;
+    }
+    #OPCOES_MENU {
+        right: -.5rem;
+    }
+    .OPCOES span {
+        font-size: 3.5rem;
+    }
+
+    #RODAPE {
+        position: relative;
+        bottom: 0;
+        margin-top: 63.3vw;
+        height: 13rem;
+    }
+    #RODAPE h3 {
+        margin-top: 2rem;
+    }
+}
+@media (min-width: 1280px) and (max-width: 1500px) and (min-height: 720px) and (max-height: 800px){ 
+    #MENU {
+        width: 25%;
+        height: 100vw;
+    }
+    #header_menu {
+        height: 8%;
+        padding-right: 20rem;
+    }
+    .OPCOES {
+        margin-bottom: 33.4vw;
+        margin-left: 23.6vw;
+    }
+    .OPCOES span {
+        font-size: 3.2rem;
+    }
+}
