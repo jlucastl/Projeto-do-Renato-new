@@ -46,10 +46,36 @@ nav {
     cursor: pointer;
     font-size: 1.5rem;
 }
+
 #mSala span {
     font-size: 2.5rem;
 }
 #mSala:hover {
+    background-color: rgb(211, 211, 211);
+}
+#logOut{
+    font-weight: 500;
+    background-color: rgb(231, 231, 231);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    z-index: 6;
+    right: 4.6rem;
+
+    border-radius: 1.5rem;
+    border: none;
+
+    width: 8rem;
+    padding: .7rem;
+    cursor: pointer;
+    font-size: 1.3rem;
+}
+#logOut span {
+    font-size: 2rem;
+}
+
+#logOut:hover {
     background-color: rgb(211, 211, 211);
 }
 
@@ -61,7 +87,7 @@ nav {
     flex-direction: column;
     align-items: center;
     gap: 1rem;
-    z-index: 1000;
+    z-index: 4;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -310,6 +336,7 @@ box-shadow: 0px 0px 5px white;
   position: absolute;
   top: 50%;
   left: 50%;
+  z-index: 4;
   transform: translate(-50%, -50%);
   justify-content: center;
   align-items: center;
