@@ -441,5 +441,16 @@ box-shadow: 0px 0px 5px white;
     #NOMESALAS {
         display: none;
     }
+    #logOut {
+        width: auto;
+        right: 2rem;
+    }
+    #LOGOUTNOME {
+        display: none;
+    }
+    #cAluno {
+        width: 80%;
+        margin-top: 2rem;
+    }
     
 }
